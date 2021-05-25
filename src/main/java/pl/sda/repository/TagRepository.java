@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface TagRepository <T, L extends Number> extends Repository<Tag, Long>{
     List<Photo> findPhotoByTag(long id);
+
 }

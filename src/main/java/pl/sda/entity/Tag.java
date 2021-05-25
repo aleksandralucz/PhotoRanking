@@ -19,7 +19,6 @@ public class Tag {
     private String label;
 
     @EqualsAndHashCode.Exclude
-    @ToString.Exclude
     @ManyToMany(mappedBy = "tags", fetch = FetchType.LAZY)
     private Set<Photo> photos  = new HashSet<>();
 }

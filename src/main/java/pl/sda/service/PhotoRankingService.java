@@ -11,5 +11,6 @@ public interface PhotoRankingService {
         List<NewPhoto> findAll();
         Optional<NewPhoto> findRandom();
 
+
     }
 

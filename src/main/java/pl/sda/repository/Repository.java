@@ -8,5 +8,6 @@ public interface Repository<T, K> {
     T merge(T entity);
     void deleteById(K id);
     void delete(T entity);
-    Optional<T> findByRank(K rank);
+    Optional<K> findByRank(K rank);
+    Optional<K> findByEmailAddress(K emailAddress);
 }

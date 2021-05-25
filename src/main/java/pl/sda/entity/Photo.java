@@ -1,7 +1,9 @@
 package pl.sda.entity;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -20,7 +22,8 @@ public class Photo {
     private String description;
     private String title;
     private String tag;
-    private String camera;
+
+    private Timestamp registered;
 
     @EqualsAndHashCode.Exclude
     @OneToMany(mappedBy = "photos", fetch = FetchType.LAZY)

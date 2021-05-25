@@ -6,5 +6,8 @@ import lombok.Data;
 @Data
 @Builder
 public class NewPhoto {
+    private String question;
+    private String answer;
+
 }
 

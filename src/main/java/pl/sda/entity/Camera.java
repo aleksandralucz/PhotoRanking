@@ -12,7 +12,7 @@ import javax.persistence.*;
 public class Camera {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long serialNumber;
+    private long id;
     private String brand;
     private int rating;
 

@@ -1,8 +1,8 @@
 package pl.sda.controller;
-import pl.sda.view.Menu;
+import pl.sda.view.core.Menu;
 import pl.sda.service.PhotoService;
-import pl.sda.view.ConsoleLooper;
-import pl.sda.view.ConsoleView;
+import pl.sda.view.core.ConsoleLooper;
+import pl.sda.view.core.ConsoleView;
 
 import java.util.Scanner;
 

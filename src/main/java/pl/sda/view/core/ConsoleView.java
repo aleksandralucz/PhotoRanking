@@ -1,4 +1,4 @@
-package pl.sda.view;
+package pl.sda.view.core;
 
 import java.io.IOException;
 import java.io.InputStream;

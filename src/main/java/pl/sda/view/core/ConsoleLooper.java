@@ -1,4 +1,4 @@
-package pl.sda.view;
+package pl.sda.view.core;
 
 public class ConsoleLooper {
     private final ConsoleView view;

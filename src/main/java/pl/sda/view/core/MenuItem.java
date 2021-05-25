@@ -1,4 +1,4 @@
-package pl.sda.view;
+package pl.sda.view.core;
 
 public final class MenuItem {
     public final String label;

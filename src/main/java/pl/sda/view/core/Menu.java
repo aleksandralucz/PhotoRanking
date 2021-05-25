@@ -1,4 +1,4 @@
-package pl.sda.view;
+package pl.sda.view.core;
 
 import java.util.ArrayList;
 import java.util.List;

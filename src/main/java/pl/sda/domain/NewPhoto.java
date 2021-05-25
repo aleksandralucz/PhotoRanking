@@ -13,5 +13,6 @@ public class NewPhoto{
     private String title;
     private String tag;
 
+
 }
 

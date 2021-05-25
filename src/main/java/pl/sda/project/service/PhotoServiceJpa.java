@@ -1,10 +1,12 @@
-package pl.sda.service;
+package pl.sda.project.service;
 
 
 import org.springframework.stereotype.Service;
-import pl.sda.Metadane;
-import pl.sda.domain.NewPhoto;
-import pl.sda.repository.PhotoRepository;
+
+import pl.sda.project.domain.NewPhoto;
+import pl.sda.project.metadata.Metadata;
+import pl.sda.project.repository.PhotoRepository;
+
 import java.util.List;
 
 
@@ -25,7 +27,7 @@ public class PhotoServiceJpa implements PhotoService {
     }
 
     @Override
-    public List<Metadane> findAll() {
+    public List<Metadata> findAll() {
         return null;
     }
 }

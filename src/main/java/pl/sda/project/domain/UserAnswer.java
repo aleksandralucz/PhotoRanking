@@ -1,4 +1,4 @@
-package pl.sda.domain;
+package pl.sda.project.domain;
 
 import lombok.Builder;
 import lombok.Data;

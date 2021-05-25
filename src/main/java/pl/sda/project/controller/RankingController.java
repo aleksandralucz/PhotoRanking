@@ -1,9 +1,8 @@
-package pl.sda.controller;
-import pl.sda.view.core.Menu;
-import pl.sda.service.PhotoService;
-import pl.sda.view.core.ConsoleLooper;
-import pl.sda.view.core.ConsoleView;
-import pl.sda.view.domain.InputNewMetadataFromConsole;
+package pl.sda.project.controller;
+import pl.sda.project.view.core.Menu;
+import pl.sda.project.service.PhotoService;
+import pl.sda.project.view.core.ConsoleLooper;
+import pl.sda.project.view.core.ConsoleView;
 
 import java.util.Scanner;
 

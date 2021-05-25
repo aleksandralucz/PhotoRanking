@@ -1,4 +1,4 @@
-package pl.sda.view.domain;
+package pl.sda.project.view.domain;
 
 import java.util.ArrayList;
 import java.util.List;

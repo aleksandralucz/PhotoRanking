@@ -1,4 +1,4 @@
-package pl.sda.entity;
+package pl.sda.project.entity;
 import lombok.*;
 import javax.persistence.*;
 

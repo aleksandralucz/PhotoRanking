@@ -1,18 +1,19 @@
-package pl.sda.domain;
+package pl.sda.project.metadata;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-// to informacje o fotografii, ale bez id, daty dodania itd. czyli tylko te dane, które wpisuje użytkownik.
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Builder
-public class NewPhoto{
+public class Metadata {
+    private long id;
     private int size;
     private int rate;
     private String description;
     private String title;
     private String tag;
-
-
 }
-

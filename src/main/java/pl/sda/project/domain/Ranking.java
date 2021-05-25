@@ -1,8 +1,7 @@
-package pl.sda.domain;
+package pl.sda.project.domain;
 
 import lombok.Builder;
 import lombok.Data;
-import pl.sda.entity.User;
 
 import java.util.Objects;
 

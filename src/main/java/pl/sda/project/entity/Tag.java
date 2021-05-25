@@ -11,6 +11,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Table(name = "TAGS")
 public class Tag {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

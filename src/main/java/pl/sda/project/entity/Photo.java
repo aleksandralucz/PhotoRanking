@@ -25,12 +25,16 @@ public class Photo {
     private Timestamp registered;
 
     @EqualsAndHashCode.Exclude
-    @OneToMany(mappedBy = "photos", fetch = FetchType.LAZY)
-    private Set<Camera> cameras = new HashSet<>();
+    @ManyToOne
+    private Camera cameras;
 
     @EqualsAndHashCode.Exclude
-    @OneToMany(mappedBy = "photos", fetch = FetchType.LAZY)
-    private Set<User> user = new HashSet<>();
+    @ManyToOne
+    private User user;
+
+    @EqualsAndHashCode.Exclude
+    @ManyToMany
+    private Set <Tag> tags = new HashSet<>();
 
 
 }

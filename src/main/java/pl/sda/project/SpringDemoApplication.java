@@ -13,8 +13,6 @@ import javax.persistence.Persistence;
 @SpringBootApplication
 public class SpringDemoApplication implements CommandLineRunner {
 
-        static EntityManagerFactory factory = Persistence.createEntityManagerFactory("photoranking");
-
         private final RankingController controller;
 
         public SpringDemoApplication(PhotoService photoService) {

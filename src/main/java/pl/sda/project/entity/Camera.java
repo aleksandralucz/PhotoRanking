@@ -1,6 +1,7 @@
 package pl.sda.project.entity;
 import lombok.*;
 import javax.persistence.*;
+import java.util.Set;
 
 
 @Data
@@ -16,11 +17,13 @@ public class Camera {
     private String brand;
     private int rating;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Photo photo;
+    @EqualsAndHashCode.Exclude
+    @OneToMany(fetch = FetchType.LAZY)
+    private Set<Photo> photo;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private User users;
+    @EqualsAndHashCode.Exclude
+@OneToMany (fetch = FetchType.LAZY)
+    private Set<User> users;
 
 
 }

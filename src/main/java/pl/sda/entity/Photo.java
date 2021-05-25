@@ -1,10 +1,9 @@
 package pl.sda.entity;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Builder
@@ -22,5 +21,14 @@ public class Photo {
     private String title;
     private String tag;
     private String camera;
+
+    @EqualsAndHashCode.Exclude
+    @OneToMany(mappedBy = "photos", fetch = FetchType.LAZY)
+    private Set<Camera> cameras = new HashSet<>();
+
+    @EqualsAndHashCode.Exclude
+    @OneToMany(mappedBy = "photos", fetch = FetchType.LAZY)
+    private Set<User> user = new HashSet<>();
+
 
 }

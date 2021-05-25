@@ -10,4 +10,7 @@ public class UserAnswer {
     private long photoId;
     private String userEmailAddress;
     private String answer;
+    private String userPassword;
+    private boolean userIsRegistered;
+
 }

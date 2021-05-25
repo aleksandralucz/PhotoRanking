@@ -15,6 +15,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true)
     private String EmailAddress;
+    private String password;
     private boolean isRegistered;
 
 }

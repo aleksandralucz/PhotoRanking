@@ -16,4 +16,11 @@ public class Camera {
     private String brand;
     private int rating;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Photo photo;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private User users;
+
+
 }

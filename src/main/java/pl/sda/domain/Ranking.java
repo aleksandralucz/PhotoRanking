@@ -13,7 +13,7 @@ public class Ranking {
     private String answer;
     private boolean accepted;
 
-    public boolean isValidUserAnswer(UserAnswer userAnswer){
-        return Objects.equals(answer, userAnswer.getAnswer());
-    }
+//    public boolean isValidUserAnswer(UserAnswer userAnswer){
+//        return Objects.equals(answer, userAnswer.getAnswer());
+//    }
 }

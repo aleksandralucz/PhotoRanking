@@ -1,0 +1,20 @@
+package pl.sda.entity;
+
+import lombok.*;
+
+import javax.persistence.*;
+
+@Data
+@Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "USERS")
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(unique = true)
+    private String EmailAddress;
+    private boolean isRegistered;
+
+}

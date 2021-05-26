@@ -2,7 +2,6 @@ package pl.sda.project.domain;
 
 import lombok.Builder;
 import lombok.Data;
-// to informacje o fotografii, ale bez id, daty dodania itd. czyli tylko te dane, które wpisuje użytkownik.
 
 @Data
 @Builder

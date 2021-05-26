@@ -1,10 +1,12 @@
 package pl.sda.project.entity;
 import lombok.*;
+import pl.sda.project.domain.Ranking;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.HashSet;
 import java.util.Set;
+
 
 @Entity
 @Builder
@@ -14,13 +16,11 @@ import java.util.Set;
 @Table(name = "PHOTOS")
 public class Photo {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private int size;
-    private int rate;
-    private String description;
-    private String title;
-    private String tag;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Embedded
+    private Metadata metadata;
 
     private Timestamp registered;
 
@@ -35,6 +35,5 @@ public class Photo {
     @EqualsAndHashCode.Exclude
     @ManyToMany
     private Set <Tag> tags = new HashSet<>();
-
 
 }

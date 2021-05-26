@@ -1,27 +1,24 @@
 package pl.sda.project.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.util.Objects;
+
+import java.util.Comparator;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 
-@Data
-@Builder
+@AllArgsConstructor
+
 public class Ranking {
-    private long photoId;
-    private long serialNumberOfCamera;
-    private String[] options;
-    private String answer;
-    private boolean accepted;
 
-    public boolean isUserRegistered(UserAnswer userAnswer) {
-        if (userAnswer == null) {
-            return false;
-        }
-        if (userAnswer.getPhotoId() != photoId) {
-            return false;
-        }
-        return Objects.equals(answer, userAnswer.getAnswer());
+    private List<RatedPhoto> ranking = new ArrayList<RatedPhoto>();
+
+    public List<RatedPhoto> getRanking() {
+        return ranking.stream().sorted(Comparator.comparingInt(RatedPhoto::getRating)).collect(Collectors.toList());
     }
 }

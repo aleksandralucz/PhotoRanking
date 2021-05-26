@@ -23,6 +23,7 @@ public class PhotoServiceJpa implements PhotoService {
 
     @Override
     public void addPhoto(NewPhoto newPhoto) {
+//        photoRepository.save()
 
     }
 

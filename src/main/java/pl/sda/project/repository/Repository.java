@@ -12,7 +12,7 @@ public interface Repository {
     void save(Photo photo);
     void remove(Photo photo);
     List<Photo> findAll();
-    List<Photo> findByPhotoId(long id);
-    List<Camera>findByCameraId(long id);
+    List<Photo> findByPhotoTitle(String title);
+    List<Camera>findByCameraBrand(String brand);
 
 }

@@ -2,11 +2,11 @@ package pl.sda.project.view.domain;
 
 import java.util.Scanner;
 
-public class InputPhotoTitleToSearchFromConsole {
+public class AskUserFOrPhotoTitleToSearchFromConsole {
     private final Scanner scanner;
 
 
-    public InputPhotoTitleToSearchFromConsole(Scanner scanner) {
+    public AskUserFOrPhotoTitleToSearchFromConsole(Scanner scanner) {
         this.scanner = scanner;
     }
     public String putPhotoTitle(){

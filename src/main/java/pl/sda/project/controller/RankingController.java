@@ -10,7 +10,6 @@ import pl.sda.project.view.core.MenuItem;
 import pl.sda.project.view.domain.*;
 
 
-import java.util.List;
 import java.util.Scanner;
 
 public class RankingController {
@@ -22,6 +21,7 @@ public class RankingController {
         Menu menu = new Menu();
         view = new ConsoleView(menu, System.in);
         looper = new ConsoleLooper(view);
+        long userId=0;
         menu.addMenuItem(
                 new MenuItem("Find photo by ID",
                         () -> {
@@ -53,7 +53,16 @@ public class RankingController {
                         () -> {
                             InputNewPhotoFromConsole putNewPhoto = new InputNewPhotoFromConsole(input);
                             NewPhoto addNew = putNewPhoto.putNewPhoto();
+                            photoService.addPhoto(addNew,userId);
                             System.out.println(addNew);
+                        })
+        );
+        menu.addMenuItem(
+                new MenuItem("Delete photo",
+                        () -> {
+                    DeletePhotoFromConsole del = new DeletePhotoFromConsole(input);
+                    String deletePhotoByTitle = del.deletePhotoByTitle();
+                    photoService.deletePhotoByTitle(deletePhotoByTitle);
                         })
         );
         menu.addMenuItem(

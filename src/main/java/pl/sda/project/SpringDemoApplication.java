@@ -6,9 +6,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import pl.sda.project.controller.RankingController;
 import pl.sda.project.service.PhotoService;
 
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-
 
 @SpringBootApplication
 public class SpringDemoApplication implements CommandLineRunner {

@@ -21,6 +21,5 @@ public class Metadata {
     private int rate;
     private String description;
     private String title;
-    private String tag;
 
 }

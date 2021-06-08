@@ -26,7 +26,7 @@ public class Photo {
 
     @EqualsAndHashCode.Exclude
     @ManyToOne
-    private Camera cameras;
+    private Camera camera;
 
     @EqualsAndHashCode.Exclude
     @ManyToOne

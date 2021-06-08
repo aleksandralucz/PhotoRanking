@@ -1,16 +1,19 @@
 package pl.sda.project.view.domain;
 
-import lombok.ToString;
 import pl.sda.project.domain.NewPhoto;
-import pl.sda.project.entity.Camera;
+import pl.sda.project.service.PhotoServiceJpa;
 
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class InputNewPhotoFromConsole {
     private final Scanner scanner;
 
+
     public InputNewPhotoFromConsole(Scanner scanner) {
         this.scanner = scanner;
+
     }
 
     public NewPhoto putNewPhoto() {
@@ -24,8 +27,16 @@ public class InputNewPhotoFromConsole {
         String addDesc = scanner.nextLine();
         scanner.nextLine();
 
-        System.out.println("Add tag of photo");
-        String addTag = scanner.nextLine();
+        System.out.println("How many tags you want to add?");
+        int count=scanner.nextInt();
+        Set<String> tags = new HashSet<>();
+        for (int i=0;i<count;i++){
+            System.out.println("Add tag of photo");
+            String addTag = scanner.nextLine();
+            tags.add(addTag);
+        }
+
+
 
 
         System.out.println("Add size of photo");
@@ -39,11 +50,15 @@ public class InputNewPhotoFromConsole {
         System.out.println("Add camera");
         String addCamera = scanner.next();
 
+
+
         return NewPhoto.builder()
-                .title(putNewPhoto().getTitle())
-                .description(putNewPhoto().getDescription())
-                .tag(putNewPhoto().getTag())
-                .rate(putNewPhoto().getRate())
+                .title(title)
+                .description(addDesc)
+                .tags(tags)
+                .rate(addRate)
+                .size(addSize)
+                .camera(addCamera)
                 .build();
 
         }

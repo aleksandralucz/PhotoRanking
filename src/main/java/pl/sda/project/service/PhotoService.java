@@ -2,6 +2,7 @@ package pl.sda.project.service;
 
 
 import pl.sda.project.domain.NewPhoto;
+import pl.sda.project.entity.Photo;
 import pl.sda.project.entity.User;
 
 
@@ -11,11 +12,12 @@ import java.util.Optional;
 
 public interface PhotoService {
 
-        void addPhoto(NewPhoto newPhoto);
-        List<NewPhoto> findByTitle(String title);
-        List<NewPhoto> findByTag(String label);
-        List<NewPhoto> findByRate(int rate);
-        boolean isLogged(User user);
+        void addPhoto(NewPhoto newPhoto,long id);
+        List<Photo> findByTitle(String title);
+        List<Photo> findByTag(String label);
+        List<Photo> findByRate(int rate);
+        void deletePhotoByTitle(String title);
+        boolean isLogged(User user, String password);
 
     }
 

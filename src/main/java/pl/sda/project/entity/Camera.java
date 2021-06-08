@@ -14,6 +14,7 @@ public class Camera {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column(unique = true)
     private String brand;
     private int rating;
 
@@ -21,9 +22,9 @@ public class Camera {
     @OneToMany(fetch = FetchType.LAZY)
     private Set<Photo> photo;
 
-    @EqualsAndHashCode.Exclude
-@OneToMany (fetch = FetchType.LAZY)
-    private Set<User> users;
+//    @EqualsAndHashCode.Exclude
+//@OneToMany (fetch = FetchType.LAZY)
+//    private Set<User> users;
 
 
 }

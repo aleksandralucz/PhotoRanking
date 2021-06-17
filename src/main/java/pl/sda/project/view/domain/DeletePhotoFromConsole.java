@@ -12,9 +12,9 @@ public class DeletePhotoFromConsole {
 
     }
 
-    public String deletePhotoByTitle() {
-        System.out.println("Do you want delete photo: " + scanner);
-        return scanner.nextLine();
+    public long deletePhotoById() {
+        System.out.println("Enter the id of the photo you want to delete: ");
+        return scanner.nextLong();
     }
     }
 

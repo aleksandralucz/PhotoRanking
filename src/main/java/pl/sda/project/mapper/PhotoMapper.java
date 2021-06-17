@@ -7,7 +7,9 @@ import pl.sda.project.entity.*;
 
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
+import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 
 public enum PhotoMapper {
@@ -27,11 +29,14 @@ public enum PhotoMapper {
     }
 
     public NewPhoto toDomain(Photo photo) {
+
         return NewPhoto.builder()
                 .title(photo.getMetadata().getTitle())
                 .rate(photo.getMetadata().getRate())
                 .size(photo.getMetadata().getSize())
                 .description(photo.getMetadata().getDescription())
+                .tags(photo.getTags().stream().map(Tag::getLabel).collect(Collectors.toSet()))
+                .camera(photo.getCamera().getBrand())
                 .build();
     }
 

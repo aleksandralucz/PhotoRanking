@@ -1,11 +1,15 @@
 package pl.sda.project.view.core;
 
+import pl.sda.project.service.PhotoService;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Menu {
+
     private List<MenuItem> menuItems = new ArrayList<>();
-    public static Runnable DEFAULT_QUIT = () -> System.exit(0);//zamyka JVM
+    public static Runnable DEFAULT_QUIT = () ->
+            System.exit(0);//zamyka JVM
 
     public void addMenuItem(MenuItem item) {
         menuItems.add(item);

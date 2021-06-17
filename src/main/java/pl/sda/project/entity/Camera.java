@@ -9,7 +9,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name = "CAMERAS")
+@Table(name = "cameras")
 public class Camera {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

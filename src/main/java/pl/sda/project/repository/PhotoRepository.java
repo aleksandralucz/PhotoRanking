@@ -11,15 +11,16 @@ import java.util.List;
 
 public interface PhotoRepository extends JpaRepository<Photo, Long> {
 
-    @Query("select p from Photo p where p.metadata.title like :title")
+    @Query("select p from Photo p where p.metadata.title = :title")
     List<Photo> findByTitle(String title);
 
+    @Query("select p from Photo p where p.id = :id")
+    Photo findById(long id);
 
-    @Query("select p from Photo p where p.metadata.description like :description")
-    List<Photo> findByDescription(String description);
 
-    @Query("select p from Photo p where p.metadata.tag like :tag")
-    List<Photo> findByTag(String tag);
+
+
+//
 
     @Query("select p from Photo p where p.camera.brand like :brand")
     List<Photo> findByCameraBrand(String brand);

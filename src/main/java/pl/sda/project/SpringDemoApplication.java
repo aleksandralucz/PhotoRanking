@@ -12,6 +12,7 @@ public class SpringDemoApplication implements CommandLineRunner {
 
         private final RankingController controller;
 
+
         public SpringDemoApplication(PhotoService photoService) {
                 controller = new RankingController(photoService);
         }

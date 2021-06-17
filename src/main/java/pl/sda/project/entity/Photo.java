@@ -13,11 +13,11 @@ import java.util.Set;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "PHOTOS")
+@Table(name = "photos")
 public class Photo {
     @Id
-    private long id;
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
 
     @Embedded
     private Metadata metadata;
@@ -33,7 +33,7 @@ public class Photo {
     private User user;
 
     @EqualsAndHashCode.Exclude
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     private Set <Tag> tags = new HashSet<>();
 
 }

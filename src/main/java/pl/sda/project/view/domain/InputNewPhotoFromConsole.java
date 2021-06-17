@@ -32,7 +32,7 @@ public class InputNewPhotoFromConsole {
         Set<String> tags = new HashSet<>();
         for (int i=0;i<count;i++){
             System.out.println("Add tag of photo");
-            String addTag = scanner.nextLine();
+            String addTag = scanner.next();
             tags.add(addTag);
         }
 

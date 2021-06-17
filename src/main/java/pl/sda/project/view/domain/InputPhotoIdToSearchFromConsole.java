@@ -9,8 +9,8 @@ public class InputPhotoIdToSearchFromConsole {
     public InputPhotoIdToSearchFromConsole(Scanner scanner) {
         this.scanner = scanner;
     }
-    public String putPhotoId(){
+    public long putPhotoId(){
         System.out.println("photo ID");
-        return scanner.nextLine();
+        return scanner.nextLong();
     }
 }

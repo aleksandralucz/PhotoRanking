@@ -1,5 +1,7 @@
 # PhotoRanking
-My first indyvidual project.
+
+
+Creat in Java using hiberante, mySQL and Spring.
 
 
 Logged user is able to add new photo(metadata), cameras brand and give a rate of photos.
